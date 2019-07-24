@@ -1,0 +1,21 @@
+GET http://localhost:3000/
+
+###
+
+POST http://localhost:3000/auth/register
+content-type: application/json
+
+{
+    "email":"juan+3@geekshubs.com",
+    "password": "12345678"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+content-type: application/json
+
+{
+    "email":"juan+3@geekshubs.com",
+    "password": "12345678"
+}

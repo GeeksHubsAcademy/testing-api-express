@@ -1,0 +1,20 @@
+{
+  "name": "express-api-avantio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "prestart": "npm run start:mongod && DEBUG=express-api-avantio:*",
+    "start:mongod": "sudo systemctl start mongod",
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.0",
+    "mongoose": "^5.6.6",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.19.1"
+  }
+}
