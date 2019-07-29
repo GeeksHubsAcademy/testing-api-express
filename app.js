@@ -5,6 +5,11 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var moviesRouter = require('./routes/movies');
+
+require('dotenv').config();
+
+console.log(process.env.JWT_SECRET);
 
 var app = express();
 
@@ -21,6 +26,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/auth', usersRouter);
+app.use('/movies',moviesRouter);
 
 app.use((req,res) => {
     res.status(404).send('not found');
