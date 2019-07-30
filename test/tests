@@ -19,6 +19,13 @@ content-type: application/json
     "email":"juan+3@geekshubs.com",
     "password": "12345678"
 }
+###
+
+
+GET http://localhost:3000/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzg4OTdiNWVjMjMzMWZlZmMzNDZhZSIsImlhdCI6MTU2NDQ5OTE4Mn0._Cs2utoavQXp-es69NrWreQG_pF-bN_IRs_pYzyNQuU
+
+
 
 ###
 
@@ -28,7 +35,7 @@ GET http://localhost:3000/movies
 
 POST http://localhost:3000/movies
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzg4OTdiNWVjMjMzMWZlZmMzNDZhZSIsImlhdCI6MTU2Mzk4ODYyOX0.ir9r5qnCeAb3amXXiFD1cTTi_w8HsN4RPGmh04iLCYg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzg4OTdiNWVjMjMzMWZlZmMzNDZhZSIsImlhdCI6MTU2NDQ5Nzk0MX0.seaTFcdGiYOicYCpITBzGliZRUxseTvvVSahZBf3uhs
 
 {
     "title": "Matrix"

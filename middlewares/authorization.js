@@ -13,6 +13,8 @@ module.exports = async (req, res, next) => {
         const userFound = await UserModel.findById(decoded.id);
 
         if (userFound.token === token) {
+
+          req.uid = decoded.id;
           return next();
         }
       }
