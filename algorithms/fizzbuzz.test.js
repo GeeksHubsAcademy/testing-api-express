@@ -21,28 +21,28 @@ describe('fizzbuzz', () => {
   });
 
   test('it should return an array of the same length that the argument', async () => {
-    const randomNumber = Math.round(Math.random() * 10);
+    const randomNumber = Math.ceil(Math.random() * 10);
     const array = await fizzbuzz(randomNumber);
     expect(array.length).toBe(randomNumber);
   });
   test('the position multiple of three should contain fizz', async () => {
-    const randomNumber = Math.round(Math.random() * 10) * 3;
-    const array = await fizzbuzz(randomNumber + 1);
+    const randomNumber = Math.ceil(Math.random() * 10) * 3;
+    const array = await fizzbuzz(randomNumber);
     expect(array[randomNumber - 1]).toMatch('fizz');
   });
   test('the position multiple of five should contain buzz', async () => {
-    const randomNumber = Math.round(Math.random() * 10) * 5;
-    const array = await fizzbuzz(randomNumber + 1);
+    const randomNumber = Math.ceil(Math.random() * 10) * 5;
+    const array = await fizzbuzz(randomNumber);
     expect(array[randomNumber - 1]).toMatch('buzz');
   });
   test('the position multiple of five and three should contain fizzbuzz', async () => {
-    const randomNumber = Math.round(Math.random() * 10) * 5 * 3;
-    const array = await fizzbuzz(randomNumber + 1);
+    const randomNumber = Math.ceil(Math.random() * 10) * 5 * 3;
+    const array = await fizzbuzz(randomNumber);
     expect(array[randomNumber - 1]).toBe('fizzbuzz');
   });
   test('the position non multiple of five or three should this number', async () => {
     const randomNumber = nonMultipleOf3or5(99);
-    const array = await fizzbuzz(randomNumber + 1);
+    const array = await fizzbuzz(randomNumber);
     expect(array[randomNumber - 1]).toBe(String(randomNumber));
   });
 });

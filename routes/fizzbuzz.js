@@ -4,9 +4,13 @@ const fizzbuzz = require('../algorithms/fizzbuzz');
 
 router.get('/:max', async function(req, res, next) {
 
-  const output = await fizzbuzz(req.params.max);
+ try {
+    const output = await fizzbuzz(req.params.max);
 
-  res.json(output);
+    return res.json(output);
+ } catch (error) {
+    res.status(400).json(error);
+ }
 });
 
 

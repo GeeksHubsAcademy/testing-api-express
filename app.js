@@ -9,7 +9,6 @@ var moviesRouter = require('./routes/movies');
 
 require('dotenv').config();
 
-console.log(process.env.JWT_SECRET);
 
 var app = express();
 

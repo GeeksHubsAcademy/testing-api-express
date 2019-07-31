@@ -11,19 +11,24 @@ router.post('/register', async function(req, res, next) {
     await user.save();
     res.json({ message: 'saved', user });
   } catch (error) {
-    console.log(error);
-    if (error.name === 'MongoError') {
+    if (error.name === 'MongoNetworkError') {
       res.status(500).json({ message: 'not saved', error });
     } else {
       const message = error.message || error.errmsg;
-      res.status(404).json({ message: 'not saved: ' + message, error });
+      res.status(400).json({ message: 'not saved: ' + message, error });
     }
   }
 });
 
 router.post('/login', async function(req, res, next) {
   const { email, password } = req.body;
+  if (!email || !password) {
+     return res.status(400).json({ message: 'not logged', error:'body mal formed' });
+  }
+
   let userFound;
+
+
   try {
     debugger;
     userFound = await UserModel.isValidLogin(email, password);
