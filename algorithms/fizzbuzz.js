@@ -6,5 +6,23 @@ module.exports = async (max) => {
         throw new Error('I should receive a positive number > 0');
     }
 
-    return []
+    const output = []
+
+
+    for (let index = 1; index <= max; index++) {
+
+        let item = ''
+        item += index % 3 === 0 ? 'fizz' : '';
+        item += index % 5 === 0 ? 'buzz' : '';
+
+        if (index % 3 !== 0 && index % 5 !== 0) {
+            item = String(index);
+        }
+
+
+        output.push(item);
+
+    }
+
+    return output;
 };
