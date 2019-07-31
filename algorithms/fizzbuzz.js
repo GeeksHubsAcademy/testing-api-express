@@ -11,15 +11,10 @@ module.exports = async (max) => {
 
     for (let index = 1; index <= max; index++) {
 
-        let item = ''
+        let item = '';
         item += index % 3 === 0 ? 'fizz' : '';
         item += index % 5 === 0 ? 'buzz' : '';
-
-        if (index % 3 !== 0 && index % 5 !== 0) {
-            item = String(index);
-        }
-
-
+        item = item ? item : String(index);
         output.push(item);
 
     }
