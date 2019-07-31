@@ -6,7 +6,7 @@ POST http://localhost:3000/auth/register
 content-type: application/json
 
 {
-    "email":"juan+3@geekshubs.com",
+    "email":"juan+4@geekshubs.com",
     "password": "12345678"
 }
 
@@ -23,7 +23,7 @@ content-type: application/json
 
 
 GET http://localhost:3000/auth/logout
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzg4OTdiNWVjMjMzMWZlZmMzNDZhZSIsImlhdCI6MTU2NDQ5OTE4Mn0._Cs2utoavQXp-es69NrWreQG_pF-bN_IRs_pYzyNQuU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzg4OTdiNWVjMjMzMWZlZmMzNDZhZSIsImlhdCI6MTU2NDU4MjM1NH0._SdjAEx8fMjOPLSMvrBV2QIXEv5lVC8aDrs6XiSan-c
 
 
 
@@ -49,3 +49,6 @@ content-type: application/json
 {
     "title": "Matrix"
 }
+
+###
+http://localhost:3000/fizzbuzz/2

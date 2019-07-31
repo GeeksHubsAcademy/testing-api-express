@@ -26,7 +26,8 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/auth', usersRouter);
-app.use('/movies',moviesRouter);
+app.use('/movies', moviesRouter);
+app.use('/fizzbuzz',require('./routes/fizzbuzz.js'));
 
 app.use((req,res) => {
     res.status(404).send('not found');

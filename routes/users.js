@@ -25,6 +25,7 @@ router.post('/login', async function(req, res, next) {
   const { email, password } = req.body;
   let userFound;
   try {
+    debugger;
     userFound = await UserModel.isValidLogin(email, password);
   } catch (error) {
     return res.status(401).json({ message: 'not logged', error });

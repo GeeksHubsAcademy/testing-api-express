@@ -5,7 +5,10 @@
   "scripts": {
     "prestart": "npm run start:mongod && DEBUG=express-api-avantio:*",
     "start:mongod": "sudo systemctl start mongod",
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "debug": "nodemon --inspect ./bin/www",
+    "test": "jest --watch-all",
+    "test:init": "jest --init"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
@@ -17,5 +20,9 @@
     "mongoose": "^5.6.6",
     "morgan": "~1.9.0",
     "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2"
   }
 }
